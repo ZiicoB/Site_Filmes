@@ -1,0 +1,197 @@
+:root {
+  --font-normal-R: 16px;
+  --font-titulo1-R: 22px;
+  --font-tamanho3-R: 26px; /* texto final */
+  --font-titulo2-R: 32px;
+  --font-obs-R: 11px;
+
+  --font-normal-RC: 14px;
+  --font-titulo1-RC: 16px;
+  --font-tamanho3-RC: 26px; /* texto final */
+  --font-titulo2-RC: 28px;
+  --font-obs-RC: 11px;
+}
+
+/* Telas menores que 1150px (PC) */
+@media (max-width: 1150px) {
+  body {
+    background-image: url("img/Background2.png");
+  }
+  .container__principal {
+    display: grid;
+    grid-template-columns: 100%;
+    margin: 20% 0 0 0;
+  }
+
+  .container__caixa {
+    margin: 0 2em 0 2em;
+  }
+
+  .container__button,
+  .container__button2 {
+    margin: 0em 15% 0em 15%;
+  }
+}
+
+/* Telas menores que 930px (tablets) */
+@media (max-width: 930px) {
+  .container__principal {
+    margin: 20% 0 0 0;
+    height: 80vh;
+  }
+  .container__principal h1 {
+    font-size: var(--font-titulo1-R);
+    padding: 0.5em 1em;
+  }
+  .container__button,
+  .container__button2 {
+    font-size: var(--font-normal-R);
+  }
+  .container__imagem {
+    width: 28%;
+    margin: 0.5em 0 0.2em 0;
+  }
+
+  .container__aviso {
+    font-size: var(--font-obs-R);
+    text-align: center;
+    padding: 1em 5em;
+  }
+
+  /* Inicio Section 2 */
+  .container__2,
+  .container__3,
+  .container__4 {
+    margin: 0em 1em 4em 1em;
+    flex-direction: column;
+  }
+  .container__3 .item-1 {
+    order: 1;
+  }
+  .container__3 .item-2 {
+    order: 0;
+  }
+  .grupo__imagens {
+    width: 90%;
+  }
+
+  .titulos__secunds {
+    font-size: var(--font-titulo2-R);
+  }
+
+  .texto__secunds {
+    font-size: var(--font-normal-R);
+  }
+
+  .container__descricao {
+    text-align: center;
+  }
+
+  .container__buttons2 {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0 0 0;
+    font-size: var(--font-normal-R);
+  }
+
+  .container__5 {
+    margin: 5em 0 0 0em;
+  }
+
+  .container__dispositivos {
+    margin: 3em 0em 0em 0em;
+    flex-direction: column;
+  }
+
+  .dispositivos img {
+    width: 75%;
+  }
+
+  .texto__dispositivos {
+    font-size: var(--font-tamanho3-R);
+    margin: 0.2em 0 0em 0;
+  }
+
+  .rodape {
+    text-align: center;
+    font-size: var(--font-normal-R);
+  }
+  .rodape img {
+    margin: 2em 0 0 0;
+    width: 20%;
+  }
+
+  .rodape__lista {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1.5em 0;
+    gap: 1.5em;
+  }
+
+  .rodape p {
+    font-size: var(--font-obs-R);
+    margin: 2em 2em;
+  }
+}
+/* Telas menores que 440px (Celular) */
+@media (max-width: 440px) {
+  .container__principal {
+    margin: 20% 0 0 0;
+    height: 70vh;
+  }
+  .container__principal h1 {
+    font-size: var(--font-titulo1-RC);
+    padding: 0.5em 0.5em;
+  }
+  .container__button,
+  .container__button2 {
+    font-size: var(--font-normal-RC);
+
+    margin: 0em 1em 0em 1em;
+  }
+
+  .container__aviso {
+    font-size: var(--font-obs-RC);
+    padding: 1em 2em;
+  }
+
+  /* Inicio Section 2 */
+  .container__2,
+  .container__3,
+  .container__4 {
+    gap: 20px;
+  }
+
+  .titulos__secunds {
+    font-size: var(--font-titulo2-RC);
+    margin: 0em 0 0.5em 0;
+  }
+
+  .texto__secunds {
+    font-size: var(--font-normal-RC);
+  }
+
+  .container__buttons2 {
+    font-size: var(--font-normal-RC);
+  }
+
+  .container__5 {
+    margin: 6em 0 0 0em;
+  }
+
+  .texto__dispositivos {
+    font-size: var(--font-tamanho3-RC);
+  }
+
+  .rodape {
+    font-size: var(--font-normal-RC);
+  }
+  .rodape img {
+    margin: 2em 0 0 0;
+  }
+
+  .rodape p {
+    font-size: var(--font-obs-RC);
+  }
+}

@@ -1,0 +1,67 @@
+/* Telas menores que 1024px (tablets) */
+@media (max-width: 1024px) {
+  .container__principal {
+    grid-template-columns: 100%;
+    text-align: center;
+    padding: 2em 0;
+  }
+
+  .container__imagem {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .container__caixa {
+    margin: 1em auto;
+  }
+
+  .container__button,
+  .container__button2 {
+    margin: 0 auto;
+  }
+
+  .button__second {
+    margin: 1em auto;
+    text-align: center;
+  }
+
+  .container__descricao {
+    margin: 0 1em;
+  }
+}
+
+/* Telas menores que 768px (celulares) */
+@media (max-width: 850px) {
+  .container__3,
+  .container__4 {
+    flex-direction: column;
+    margin: 4em 0;
+    text-align: center;
+  }
+
+  .grupo__imagens {
+    width: 100%;
+  }
+
+  .container__dispositivos {
+    flex-direction: column;
+  }
+
+  .texto__dispositivos {
+    font-size: 24px;
+  }
+
+  .rodape__lista {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .rodape img {
+    width: 15%;
+  }
+
+  .rodape p {
+    margin: 1em;
+    font-size: 12px;
+  }
+}
