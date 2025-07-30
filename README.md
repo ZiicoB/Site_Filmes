@@ -22,6 +22,6 @@ Página inicial de um site de filmes.
 <img src="/Prints/C2.jpeg" alt="sobre" width="500"/> 
 <img src="/Prints/C3.jpeg" alt="sobre" width="500"/>
 
-[Visualizar o Site](https://ziicob.github.io/Site_Filmes/)
+[Visualizar o Site](https://site-filmes-plum.vercel.app/)
 
 
