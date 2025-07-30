@@ -11,7 +11,11 @@
   --font-titulo2-RC: 28px;
   --font-obs-RC: 11px;
 }
-
+@media (max-width: 1360px) {
+  .rodape__lista {
+    gap: 1.2em;
+  }
+}
 /* Telas menores que 1150px (PC) */
 @media (max-width: 1150px) {
   body {
@@ -30,6 +34,15 @@
   .container__button,
   .container__button2 {
     margin: 0em 15% 0em 15%;
+  }
+
+  .rodape img {
+    margin: 0em 0 2em 0;
+    width: 15vw;
+  }
+
+  .rodape__lista {
+    gap: 1vw;
   }
 }
 
@@ -117,7 +130,7 @@
     font-size: var(--font-normal-R);
   }
   .rodape img {
-    margin: 2em 0 0 0;
+    margin: 3em 0 1em 0;
     width: 20%;
   }
 
