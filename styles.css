@@ -21,7 +21,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid rgba(86, 207, 16, 0.089);
+  /* outline: 1px solid rgba(86, 207, 16, 0.089); */
 }
 
 body {
