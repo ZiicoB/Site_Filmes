@@ -22,6 +22,6 @@ Página inicial de um site de filmes.
 <img src="/Prints/C2.jpeg" alt="sobre" width="500"/> 
 <img src="/Prints/C3.jpeg" alt="sobre" width="500"/>
 
-[Visualizar](https://ziicob.github.io/portfolio_alura_v0_1/)
+[Visualizar](https://ziicob.github.io/Site_Filmes/)
 
 
