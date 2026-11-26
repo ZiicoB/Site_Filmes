@@ -1,0 +1,12 @@
+# Arquivos editáveis pesados
+*.psd
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Dependências
+node_modules/

@@ -1,91 +1,137 @@
 :root {
   --font-normal-R: 16px;
-  --font-titulo1-R: 22px;
-  --font-tamanho3-R: 26px; /* texto final */
+  --font-titulo1-R: 23px;
+  --font-tamanho3-R: 24px;
   --font-titulo2-R: 32px;
-  --font-obs-R: 11px;
+  --font-obs-R: 12px;
 
   --font-normal-RC: 14px;
-  --font-titulo1-RC: 16px;
-  --font-tamanho3-RC: 26px; /* texto final */
-  --font-titulo2-RC: 28px;
+  --font-titulo1-RC: 20px;
+  --font-tamanho3-RC: 22px;
+  --font-titulo2-RC: 27px;
   --font-obs-RC: 11px;
 }
+
 @media (max-width: 1360px) {
   .rodape__lista {
-    gap: 1.2em;
+    gap: 1.1rem 1.75rem;
   }
 }
-/* Telas menores que 1150px (PC) */
+
+/* Telas menores que 1150px (Notebooks pequenos / Tablets) */
 @media (max-width: 1150px) {
-  body {
-    background-image: url("img/Background2.png");
-  }
   .container__principal {
-    display: grid;
     grid-template-columns: 100%;
-    margin: 20% 0 0 0;
+    align-items: start;
+    min-height: auto;
+    padding: clamp(220px, 36vw, 340px) 1.25rem 3.5rem;
+    background-image:
+      linear-gradient(180deg, rgba(0, 3, 12, 0.25) 0%, rgba(0, 3, 12, 0.65) 45%, var(--cor-fundo) 72%),
+      url("img/Background2.png");
+    background-position: center top;
+    background-size: 100% auto;
   }
 
   .container__caixa {
-    margin: 0 2em 0 2em;
+    max-width: 640px;
   }
 
-  .container__button,
-  .container__button2 {
-    margin: 0em 15% 0em 15%;
+  .secao__conteudo,
+  .secao__planos {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .planos__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
   }
 
   .rodape img {
-    margin: 0em 0 2em 0;
+    margin-bottom: 0.5rem;
     width: 15vw;
-  }
-
-  .rodape__lista {
-    gap: 1vw;
   }
 }
 
-/* Telas menores que 930px (tablets) */
+/* Telas menores que 930px (Tablets) */
 @media (max-width: 930px) {
-  .container__principal {
-    margin: 20% 0 0 0;
-    height: 80vh;
+  .cabecalho__nav {
+    padding: 0.7rem 1.25rem;
   }
+
+  .cabecalho__menu-btn {
+    display: flex;
+  }
+
+  .cabecalho__acoes {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem 1.25rem;
+    background: rgba(0, 3, 12, 0.96);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(14px);
+  }
+
+  .cabecalho__acoes.is-open {
+    display: flex;
+  }
+
+  .cabecalho__link {
+    padding: 0.65rem 0.5rem;
+    border-radius: 8px;
+  }
+
+  .cabecalho__link:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .cabecalho__cta {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-top: 0.25rem;
+  }
+
   .container__principal h1 {
     font-size: var(--font-titulo1-R);
-    padding: 0.5em 1em;
+    padding: 0.25em 0.5em 0.5em;
   }
+
   .container__button,
   .container__button2 {
     font-size: var(--font-normal-R);
   }
+
   .container__imagem {
-    width: 28%;
-    margin: 0.5em 0 0.2em 0;
+    width: 30%;
+    margin: 0.5em 0 1em;
   }
 
   .container__aviso {
     font-size: var(--font-obs-R);
-    text-align: center;
-    padding: 1em 5em;
+    padding: 1em 1.25em 0;
   }
 
-  /* Inicio Section 2 */
-  .container__2,
-  .container__3,
-  .container__4 {
-    margin: 0em 1em 4em 1em;
+  .secao__conteudo {
     flex-direction: column;
+    padding: 3.5rem 1.25rem;
+    gap: 2.25rem;
   }
+
   .container__3 .item-1 {
     order: 1;
   }
+
   .container__3 .item-2 {
     order: 0;
   }
+
   .grupo__imagens {
-    width: 90%;
+    max-width: 440px;
   }
 
   .titulos__secunds {
@@ -94,6 +140,7 @@
 
   .texto__secunds {
     font-size: var(--font-normal-R);
+    margin: 0 auto;
   }
 
   .container__descricao {
@@ -101,84 +148,89 @@
   }
 
   .container__buttons2 {
-    display: flex;
     justify-content: center;
-    margin: 1em 0 0 0;
     font-size: var(--font-normal-R);
   }
 
+  .secao__planos {
+    padding: 4rem 1.25rem;
+  }
+
+  .planos__grid {
+    grid-template-columns: minmax(0, 420px);
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
   .container__5 {
-    margin: 5em 0 0 0em;
+    padding: 3.5rem 1.25rem;
   }
 
   .container__dispositivos {
-    margin: 3em 0em 0em 0em;
-    flex-direction: column;
+    grid-template-columns: minmax(0, 340px);
+    gap: 1.25rem;
+    margin-top: 2.5rem;
   }
 
   .dispositivos img {
-    width: 75%;
+    width: 60%;
   }
 
   .texto__dispositivos {
     font-size: var(--font-tamanho3-R);
-    margin: 0.2em 0 0em 0;
+  }
+
+  .secao__faq {
+    padding: 3.5rem 1.25rem 4.5rem;
   }
 
   .rodape {
-    text-align: center;
     font-size: var(--font-normal-R);
+    padding: 3rem 1.25rem;
   }
+
   .rodape img {
-    margin: 3em 0 1em 0;
-    width: 20%;
+    width: 24%;
   }
 
   .rodape__lista {
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    margin: 1.5em 0;
-    gap: 1.5em;
+    margin: 1.5rem 0;
+    gap: 1rem;
   }
 
   .rodape p {
     font-size: var(--font-obs-R);
-    margin: 2em 2em;
   }
 }
+
 /* Telas menores que 440px (Celular) */
 @media (max-width: 440px) {
-  .container__principal {
-    margin: 20% 0 0 0;
-    height: 70vh;
+  .cabecalho__logo img {
+    height: 30px;
   }
+
+  .container__principal {
+    padding: clamp(165px, 46vw, 230px) 0.9rem 2.75rem;
+  }
+
   .container__principal h1 {
     font-size: var(--font-titulo1-RC);
-    padding: 0.5em 0.5em;
+    padding: 0.25em 0.25em 0.5em;
   }
+
   .container__button,
   .container__button2 {
     font-size: var(--font-normal-RC);
-
-    margin: 0em 1em 0em 1em;
   }
 
   .container__aviso {
     font-size: var(--font-obs-RC);
-    padding: 1em 2em;
-  }
-
-  /* Inicio Section 2 */
-  .container__2,
-  .container__3,
-  .container__4 {
-    gap: 20px;
+    padding: 0.9em 0.5em 0;
   }
 
   .titulos__secunds {
     font-size: var(--font-titulo2-RC);
-    margin: 0em 0 0.5em 0;
   }
 
   .texto__secunds {
@@ -189,19 +241,26 @@
     font-size: var(--font-normal-RC);
   }
 
-  .container__5 {
-    margin: 6em 0 0 0em;
-  }
-
   .texto__dispositivos {
     font-size: var(--font-tamanho3-RC);
   }
 
+  .faq__item summary {
+    padding: 1rem 1.1rem;
+    font-size: 0.95rem;
+  }
+
+  .faq__item p {
+    padding: 0 1.1rem 1.1rem;
+    font-size: 0.9rem;
+  }
+
+  .modal__caixa {
+    padding: 1.75rem 1.25rem 1.5rem;
+  }
+
   .rodape {
     font-size: var(--font-normal-RC);
-  }
-  .rodape img {
-    margin: 2em 0 0 0;
   }
 
   .rodape p {

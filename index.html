@@ -1,114 +1,327 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
-    <title>Filmes +</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Assine o Filmes+ e assista a filmes e séries online na TV, computador ou celular, com downloads para assistir mesmo sem internet."
+    />
+    <title>Filmes+</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="responsive.css" media="screen" />
+    <script src="script.js" defer></script>
   </head>
 
   <body>
-    <!--<nav></nav>
-    <header></header>
-    <main></main>
-    <footer></footer>-->
+    <header class="cabecalho" id="topo">
+      <nav class="cabecalho__nav" aria-label="Navegação principal">
+        <a href="#assinar" class="cabecalho__logo" aria-label="Filmes+ Início">
+          <img src="img/Logo2.png" alt="Logo Filmes+" width="409" height="202" />
+        </a>
 
-    <section class="container__principal">
-      <div class="container__caixa">
-        <h1>Aproveite nossa assinatura do Filmes+, você pode assistir varios Filmes e Séries online por um preço único.</h1>
-        <img src="img/Logo2.png" alt="Alura Combo+" class="container__imagem" />
-        <div class="apresentacao__links">
-          <a href="www.google.com" class="container__button">Assine por 12x de R$ 118,90</a>
-          <a href="about.google/products/" class="container__button2">Mais informações <span class="destaque">Click Aqui</span> </a>
+        <button
+          type="button"
+          class="cabecalho__menu-btn"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+          aria-label="Abrir menu de navegação"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="cabecalho__acoes" id="menu-principal">
+          <a href="#beneficios" class="cabecalho__link">Benefícios</a>
+          <a href="#planos" class="cabecalho__link">Planos</a>
+          <a href="#dispositivos" class="cabecalho__link">Dispositivos</a>
+          <a href="#faq" class="cabecalho__link">Dúvidas</a>
+          <button type="button" class="cabecalho__cta" data-open-plan="Premium 4K">Assinar agora</button>
         </div>
-        <p class="container__aviso">O preço da assinatura pode variar caso seja feita pelo site ou aplicativo. Valor sujeito a alterações.</p>
-      </div>
-    </section>
+      </nav>
+    </header>
 
-    <section class="container__2">
-      <img src="img/Plataformas2.png" alt="monitor" class="grupo__imagens" />
-      <div class="container__descricao">
-        <h2 class="titulos__secunds">Assista do seu Jeito</h2>
-        <p class="texto__secunds">
-          Aproveite a tela grande da TV ou assista no celular e outros aparelhos. Nossa seleção de filmes não para de crescer.
-        </p>
-      </div>
-    </section>
-
-    <section class="container__3">
-      <div class="container__descricao item-1">
-        <p class="texto__secunds">
-          Só o Filmes+ oferece filmes e series de todos os tipos para você assistir. junto de quem gosta, onde e como quiser.
-        </p>
-        <div class="container__buttons2">
-          <a href="" class="button__second">Assine Filmes+</a>
+    <main>
+      <section class="container__principal" id="assinar">
+        <div class="container__caixa">
+          <span class="hero__badge">Streaming 4K • Sem anúncios</span>
+          <h1>Aproveite nossa assinatura do Filmes+, você pode assistir vários Filmes e Séries online por um preço único.</h1>
+          <img src="img/Logo2.png" alt="Logo Filmes+" class="container__imagem" width="409" height="202" />
+          <div class="apresentacao__links">
+            <button type="button" class="container__button" data-open-plan="Combo Anual">
+              Assine por 12x de R$ 118,90
+            </button>
+            <a href="#planos" class="container__button2">
+              Comparar planos e <span class="destaque">Mais informações</span>
+            </a>
+          </div>
+          <p class="container__aviso">O preço da assinatura pode variar caso seja feita pelo site ou aplicativo. Valor sujeito a alterações.</p>
         </div>
-      </div>
-      <img src="img/Telas2.png" alt="monitor" class="grupo__imagens item-2" />
-    </section>
+      </section>
 
-    <section class="container__4">
-      <img src="img/Notebook2.png" alt="monitor" class="grupo__imagens" />
-      <div class="container__descricao">
-        <h2 class="titulos__secunds">Baixe seus filmes</h2>
-        <p class="texto__secunds">
-          Baixe e assista quando e onde quiser. Assim, sua serie favorita sempre vai estar com você, até mesmo sem internet.
-        </p>
-      </div>
-    </section>
+      <section class="container__2 secao__conteudo" id="beneficios">
+        <div class="midia__destaque">
+          <img
+            src="img/Plataformas2.png"
+            alt="Monitor e smartphone exibindo o catálogo do Filmes+"
+            class="grupo__imagens"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+        <div class="container__descricao">
+          <span class="secao__tag">Multiplataforma</span>
+          <h2 class="titulos__secunds">Assista do seu jeito</h2>
+          <p class="texto__secunds">
+            Aproveite a tela grande da TV ou assista no celular e outros aparelhos. Nossa seleção de filmes não para de crescer.
+          </p>
+        </div>
+      </section>
 
-    <section class="container__5">
-      <p class="titulos__secunds">Disponível nos seus dispositivos favoritos</p>
+      <section class="container__3 secao__conteudo">
+        <div class="container__descricao item-1">
+          <span class="secao__tag">Catálogo completo</span>
+          <p class="texto__secunds texto__destaque">
+            Só o Filmes+ oferece filmes e séries de todos os tipos para você assistir, junto de quem gosta, onde e como quiser.
+          </p>
+          <div class="container__buttons2">
+            <a href="#planos" class="button__second">Assine Filmes+</a>
+          </div>
+        </div>
+        <div class="midia__destaque item-2">
+          <img
+            src="img/Telas2.png"
+            alt="Telas do aplicativo Filmes+ exibindo filmes e séries"
+            class="grupo__imagens"
+            width="496"
+            height="339"
+            loading="lazy"
+          />
+        </div>
+      </section>
 
-      <div class="container__dispositivos">
-        <div class="dispositivos">
-          <img src="img/tv.png" alt="Televisor" />
-          <p class="texto__dispositivos">TV</p>
+      <section class="container__4 secao__conteudo">
+        <div class="midia__destaque">
+          <img
+            src="img/Notebook2.png"
+            alt="Notebook exibindo a plataforma Filmes+"
+            class="grupo__imagens"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+        <div class="container__descricao">
+          <span class="secao__tag">Modo offline</span>
+          <h2 class="titulos__secunds">Baixe seus filmes</h2>
+          <p class="texto__secunds">
+            Baixe e assista quando e onde quiser. Assim, sua série favorita sempre vai estar com você, até mesmo sem internet.
+          </p>
+        </div>
+      </section>
+
+      <section class="secao__planos" id="planos">
+        <div class="planos__cabecalho">
+          <span class="secao__tag">Planos flexíveis</span>
+          <h2 class="titulos__secunds">Escolha o plano ideal para você</h2>
+          <p class="texto__secunds planos__subtitulo">Cancele quando quiser, sem multas ou fidelidade.</p>
+
+          <div class="planos__toggle" role="group" aria-label="Período de cobrança">
+            <button type="button" class="toggle__btn is-active" data-billing="mensal" aria-pressed="true">Mensal</button>
+            <button type="button" class="toggle__btn" data-billing="anual" aria-pressed="false">
+              Anual <span class="toggle__desconto">-20%</span>
+            </button>
+          </div>
         </div>
 
-        <div class="dispositivos">
-          <img src="img/computador.png" alt="computer" />
-          <p class="texto__dispositivos">Computador</p>
-        </div>
+        <div class="planos__grid">
+          <article class="plano__card">
+            <div class="plano__topo">
+              <h3>Básico</h3>
+              <p class="plano__desc">Ideal para assistir sozinho em Full HD.</p>
+            </div>
+            <p class="plano__preco">
+              <span class="plano__valor" data-mensal="R$ 29,90" data-anual="R$ 23,90">R$ 29,90</span>
+              <span class="plano__periodo">/mês</span>
+            </p>
+            <ul class="plano__lista">
+              <li>1 tela simultânea</li>
+              <li>Resolução Full HD (1080p)</li>
+              <li>Catálogo completo de filmes e séries</li>
+              <li>Downloads em 1 dispositivo</li>
+            </ul>
+            <button type="button" class="plano__btn" data-open-plan="Básico">Escolher Básico</button>
+          </article>
 
-        <div class="dispositivos">
-          <img src="img/celular.png" alt="celphone" />
-          <p class="texto__dispositivos">Celular</p>
-        </div>
-      </div>
-    </section>
+          <article class="plano__card plano__card--destaque">
+            <span class="plano__selo">Mais popular</span>
+            <div class="plano__topo">
+              <h3>Premium 4K</h3>
+              <p class="plano__desc">A melhor experiência em cinema em casa.</p>
+            </div>
+            <p class="plano__preco">
+              <span class="plano__valor" data-mensal="R$ 49,90" data-anual="R$ 39,90">R$ 49,90</span>
+              <span class="plano__periodo">/mês</span>
+            </p>
+            <ul class="plano__lista">
+              <li>Até 4 telas simultâneas</li>
+              <li>Ultra HD 4K + Áudio Dolby Atmos</li>
+              <li>Sem anúncios e estreias antecipadas</li>
+              <li>Downloads ilimitados offline</li>
+            </ul>
+            <button type="button" class="plano__btn plano__btn--destaque" data-open-plan="Premium 4K">Assinar Premium 4K</button>
+          </article>
 
-    <footer class="rodape">
-      <img src="img/Logo2.png" alt="logo+" />
+          <article class="plano__card">
+            <div class="plano__topo">
+              <h3>Família Plus</h3>
+              <p class="plano__desc">Perfis separados para toda a casa.</p>
+            </div>
+            <p class="plano__preco">
+              <span class="plano__valor" data-mensal="R$ 64,90" data-anual="R$ 51,90">R$ 64,90</span>
+              <span class="plano__periodo">/mês</span>
+            </p>
+            <ul class="plano__lista">
+              <li>Até 6 telas simultâneas</li>
+              <li>Ultra HD 4K com controle parental</li>
+              <li>Perfis infantis dedicados</li>
+              <li>Suporte prioritário 24h</li>
+            </ul>
+            <button type="button" class="plano__btn" data-open-plan="Família Plus">Escolher Família</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="container__5" id="dispositivos">
+        <span class="secao__tag">Em qualquer tela</span>
+        <h2 class="titulos__secunds">Disponível nos seus dispositivos favoritos</h2>
+
+        <ul class="container__dispositivos">
+          <li class="dispositivos">
+            <img src="img/tv.png" alt="" aria-hidden="true" width="339" height="192" loading="lazy" />
+            <h3 class="texto__dispositivos">TV</h3>
+            <p class="dispositivos__sub">Smart TVs, Apple TV e consoles</p>
+          </li>
+
+          <li class="dispositivos">
+            <img src="img/computador.png" alt="" aria-hidden="true" width="339" height="192" loading="lazy" />
+            <h3 class="texto__dispositivos">Computador</h3>
+            <p class="dispositivos__sub">Windows, macOS e navegadores</p>
+          </li>
+
+          <li class="dispositivos">
+            <img src="img/celular.png" alt="" aria-hidden="true" width="339" height="192" loading="lazy" />
+            <h3 class="texto__dispositivos">Celular</h3>
+            <p class="dispositivos__sub">Smartphones e tablets Android e iOS</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="secao__faq" id="faq">
+        <span class="secao__tag">Tire suas dúvidas</span>
+        <h2 class="titulos__secunds">Perguntas frequentes</h2>
+
+        <div class="faq__lista">
+          <details class="faq__item" open>
+            <summary>O que está incluído na assinatura do Filmes+?</summary>
+            <p>
+              Você tem acesso ilimitado a milhares de filmes, séries, documentários e produções originais em alta definição, sem anúncios
+              nos planos disponíveis e com novos lançamentos toda semana.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary>Posso assistir sem internet?</summary>
+            <p>
+              Sim! Pelo aplicativo no celular, tablet ou notebook compatível, você pode baixar seus títulos favoritos e assistir offline onde
+              estiver.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary>Posso cancelar ou trocar de plano quando quiser?</summary>
+            <p>
+              Sim. Não há contrato de fidelidade nem taxa de cancelamento. Você pode mudar de plano ou cancelar sua assinatura a qualquer
+              momento.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary>Em quantos dispositivos posso usar minha conta?</summary>
+            <p>
+              Você pode entrar em vários dispositivos (Smart TV, computador e celular) e assistir simultaneamente em 1, 4 ou até 6 telas, de
+              acordo com o plano escolhido.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape" id="rodape">
+      <img src="img/Logo2.png" alt="Logo Filmes+" width="409" height="202" loading="lazy" />
       <ul class="rodape__lista">
         <li class="lista__link">
-          <a href="#">Idiomas</a>
+          <button type="button" class="rodape__btn" data-info-modal="idiomas">Idiomas</button>
         </li>
         <li class="lista__link">
-          <a href="#">Dispositivos compatíveis</a>
+          <a href="#dispositivos">Dispositivos compatíveis</a>
         </li>
         <li class="lista__link">
-          <a href="#">Contrato de assinatura</a>
+          <button type="button" class="rodape__btn" data-info-modal="contrato">Contrato de assinatura</button>
         </li>
         <li class="lista__link">
-          <a href="#">Politica de privacidade</a>
+          <button type="button" class="rodape__btn" data-info-modal="privacidade">Política de privacidade</button>
         </li>
         <li class="lista__link">
-          <a href="#">Proteção de dados no Brasil</a>
+          <button type="button" class="rodape__btn" data-info-modal="lgpd">Proteção de dados no Brasil</button>
         </li>
         <li class="lista__link">
-          <a href="#">Nossos Colaboradores</a>
+          <button type="button" class="rodape__btn" data-info-modal="colaboradores">Nossos Colaboradores</button>
         </li>
         <li class="lista__link">
-          <a href="#">Ajuda</a>
+          <a href="#faq">Ajuda</a>
         </li>
       </ul>
-      <p>- Filmes+ 2025, Feito para pratica dos meus estudos - <br />Imagens geradas por IA e editadas no photoshop<br /></p>
+      <p>- Filmes+ 2025, feito para prática dos meus estudos -<br />Imagens geradas por IA e editadas no Photoshop</p>
       <p>® 07/2025, Adriano Barnard</p>
     </footer>
+
+    <button type="button" class="voltar__topo" aria-label="Voltar ao topo" hidden>↑</button>
+
+    <div class="modal__backdrop" id="modal-backdrop" hidden>
+      <div class="modal__caixa" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <button type="button" class="modal__fechar" aria-label="Fechar janela">×</button>
+        <span class="secao__tag" id="modal-tag">Assinatura Filmes+</span>
+        <h2 class="modal__titulo" id="modal-titulo">Finalizar assinatura</h2>
+        <p class="modal__texto" id="modal-descricao"></p>
+
+        <form class="modal__form" id="modal-form">
+          <label class="modal__label">
+            Nome completo
+            <input type="text" name="nome" placeholder="Seu nome" required minlength="2" />
+          </label>
+          <label class="modal__label">
+            E-mail
+            <input type="email" name="email" placeholder="voce@exemplo.com" required />
+          </label>
+          <p class="modal__aviso">Ambiente demonstrativo de portfólio — nenhuma cobrança real será feita.</p>
+          <button type="submit" class="modal__submit">Confirmar simulação</button>
+        </form>
+
+        <div class="modal__sucesso" id="modal-sucesso" hidden>
+          <p id="modal-sucesso-texto"></p>
+          <button type="button" class="modal__submit" id="modal-ok">Concluir</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
